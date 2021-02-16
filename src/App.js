@@ -4,12 +4,23 @@ import './App.css';
 
 
 
-function App() {
-  return (
-    <div className="App">
-      <WaldosprojectHeader author={'@valtterikayhko'} name={'Valtteri'}/>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      name: 'Valtteri',
+      author:'valtterikayhko'
+    }
+  }
+  render () {
+    return (
+      <div className="App">
+        <WaldosprojectHeader
+         author={this.state.author} 
+         name={this.state.name} />
+      </div>
+    );
+  }
 }
 
 export default App;
