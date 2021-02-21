@@ -1,8 +1,10 @@
 import React from 'react';
+import StickyExampleAdjacentContext from './components/StickyExampleAdjacentContextSticky'
+import SidebarExampleSidebar from './components/SidebarExampleSidebar'
 import WaldosprojectHeader from './components/WaldosprojectHeader'
 import {
   Input,
-  Segment
+  Segment,
 } from 'semantic-ui-react'
 import './App.css';
 
@@ -23,24 +25,32 @@ class App extends React.Component {
       name: data.value
     })
   }
-
   render () {
     console.log(this.state)
     return (
       <div className="App">
         <WaldosprojectHeader
          author={this.state.author} 
-         name={this.state.name} 
-         />
-         <Segment basic>
+         name={this.state.name}
+          />
+          <SidebarExampleSidebar/>
+        <Segment basic>
          <Input 
             label={'Input Form'}
             onChange={this.onChange}
             value={this.state.name}   
-         />
-         </Segment>
+            />
+        </Segment>
       </div>
     );
+  }
+
+  render () {
+    return (
+      <div className='App'>
+        <StickyExampleAdjacentContext/>
+      </div>
+    )
   }
 }
 
