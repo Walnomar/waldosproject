@@ -1,16 +1,16 @@
 import React from 'react';
 import {
-    Header,
+    Icon,
     Image,
     Segment
 } from 'semantic-ui-react'
+import IconExampleLink from './IconExampleLink';
 
 const WaldosprojectHeader = ({author, name}) => {
   return (
-    <Segment basic inverted padded='very' vertical>
-        <Header as='h1'>This is a header for {name}'s Waldosproject!</Header>
-        <Image centered src={'VKlogo'} size={'medium'} />
-        <Header as='h3'>Author: {author}</Header>
+    <Segment content='Responsive Segment' basic inverted padded='very' vertical>
+        <Image centered src={'VKlogo'} size={'big'} />
+        <IconExampleLink/>
     </Segment>
   )
 }
